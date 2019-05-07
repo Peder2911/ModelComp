@@ -1,0 +1,20 @@
+
+# Model comparison for my thesis 2018 / 2019 ========
+
+Run scheduled_tests.py [schedule.json] [corpus.csv] to output a results.json
+file to the results folder.
+
+The schema for schedule.json is
+"model name":[configurations] (see specification of these in testing.py)
+
+The schema for corpus.csv is txt,val columns
+
+Classes are located in testing.py
+
+To create csv files from the .json output produced by scheduled_tests.py, run
+"fixResults.R" with the json files situated in ./results/.
+
+If multiple schedules are run, and should be combined, put the .csv results
+from "fixResults.R" in separate folders, and run "combineResults.R" with the
+folders as arguments. 
+
